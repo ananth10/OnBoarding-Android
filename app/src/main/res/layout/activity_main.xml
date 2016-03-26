@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" >
+
+        <!-- <com.viewpagerindicator.CirclePageIndicator -->
+        <!-- android:id="@id/indicator" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_above="@id/nux_login_frame" -->
+        <!-- android:padding="24.0dip" /> -->
+
+
+
+        <RelativeLayout
+            android:id="@+id/nux_login_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#40000000" >
+
+            <FrameLayout
+                android:id="@+id/btn_connect_w_google_plus"
+                android:layout_width="216.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24.0dip" >
+
+                <ImageButton
+                    android:id="@+id/google_plus_connect_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_google_plus_connect_selector" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/ivGooglePlusIcon"
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:src="@drawable/ic_gplus_connect" />
+
+                    <TextView
+                        android:id="@+id/tvGooglePlusConnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_toRightOf="@id/ivGooglePlusIcon"
+                        android:text="CONTINUE"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fb_login_button_wrapper"
+                android:layout_width="216.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@id/btn_connect_w_google_plus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginTop="8.0dip" >
+
+                <ImageButton
+                    android:id="@+id/fb_connect_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_facebook_connect_selector" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/ivFacebookIcon"
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:src="@drawable/ic_facebook_connect" />
+
+                    <TextView
+                        android:id="@+id/tvFacebookLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_toRightOf="@id/ivFacebookIcon"
+                        android:text="CONTINUE"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnSignupWithEmail"
+                android:layout_width="216.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@id/fb_login_button_wrapper"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_signup_w_email_selector"
+                android:singleLine="true"
+                android:text="SIGN UP WITH EMAIL"
+                android:textColor="@color/hunt_dark_grey"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/btnLoginWithEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:layout_below="@id/btnSignupWithEmail"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:text="Log in with EMAIL"
+                android:textColor="@drawable/button_text_color"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <com.ananth.onboarding.viewpager.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/nux_login_frame"
+            android:padding="24.0dip" />
+    </RelativeLayout>
+
+</FrameLayout>
